@@ -1,0 +1,26 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: ADMIN-SERVICE
+
+  datasource:
+    url: jdbc:h2:file:./database/customer_db
+    driverClassName: org.h2.Driver
+    username: root
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
